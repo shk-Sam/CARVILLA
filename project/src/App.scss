@@ -26,6 +26,33 @@ a {
   @include wrapper;
 }
 
+.floating {
+    position: absolute;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #291c77;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    
+  &:hover {
+    background-color: #0056b3;
+    transform:scale(1.1);
+  }
+    
+    .arrow {
+        margin-left: 17px;
+        margin-top: 8px;
+      }
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -40,7 +67,7 @@ header {
     border: solid 2px $darkerPurple;
     background-color: white;
     align-items: center;
-    padding: 5px 10px;
+    padding: 0 2px 0 2px;
     border-radius: 5px;
 
     input {
@@ -159,7 +186,7 @@ header {
 
   @include wrapper;
   display: flex;
-  margin-left: 180px;
+  margin-left: 149px;
   margin-top: 100px;
   // justify-content: space-around;
 
@@ -187,8 +214,6 @@ header {
     .info {
       display: flex;
       flex-direction: column;
-      // display: flex;
-      // margin-bottom: ;
       .header {
         margin-bottom: 10px;
       }
@@ -258,26 +283,27 @@ header {
       flex-direction: column;
 
       .thumbnail {
-        height: 180px;
+        height: 220px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: end;
         border: solid 1px #A9A9A9;
         border-radius: 2px;
-        padding: 15px 0 0 0;
+        padding: 30px 1px 0 1px;
 
         &:hover {
-          scale: 1.1;
+          scale: 1.05;
         }
 
         img {
+            margin-bottom: 18px;
           height: 80px;
           width: 150px;
         }
 
         p {
-          padding: -5px;
+        //   padding: -5px;
           border-top: solid 1px $lightGrey;
           color: #959BA7;
         }
@@ -291,11 +317,12 @@ header {
 .brandsSection {
   @include wrapper;
   display: flex;
-  justify-content: space-around;
+  margin-left: 110px;
   margin-top: 150px;
 
   img {
-    width: 100px;
+    width: 120px;
+  margin-left: 55px;
     height: 70px;
 
     &:hover {
@@ -305,15 +332,13 @@ header {
 }
 
 footer {
-  position: relative;
   margin-top: 850px;
   display: flex;
   justify-content: space-between;
   background-color: $darkPurple;
   color: white;
-  top: 50;
   margin-top: 200px;
-  padding: 20px;
+  padding: 12px;
 
   .copyRight {
     margin-left: 200px;
@@ -322,7 +347,7 @@ footer {
   }
 
   .logos {
-    margin-right: -250px;
+    margin-right: 220px;
 
     a {
       svg {
@@ -333,28 +358,25 @@ footer {
       }
     }
   }
+}
 
 
-  .circle {
-    top: 45;
-    position: absolute;
-    right: 0;
-    bottom: 45px;
-    // height: 50px;
-    width: 45px;
-    cursor: pointer;
-    display: flex;
-    height: 45px;
-    background-color: $lightpurple;
-    opacity: 0.8;
-    border-radius: 50%;
-    // margin-left: 15px;
-
-    .arrow {
-      margin-left: 15px;
-      margin-top: 8px;
+// Responsive strt
+@media screen and (min-width:1400px) and (max-width:1920px) {
+    .serviceSection{
+        margin-left: 240px;
     }
-
-
-  }
+    
+    .brandsSection{
+        margin-left: 190px;
+        img {
+            width: 110px;
+          margin-left: 55px;
+            height: 70px;
+        
+            &:hover {
+              scale: 1.3;
+            }
+          }
+    }
 }

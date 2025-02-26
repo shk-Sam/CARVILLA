@@ -24,7 +24,7 @@ function Header({ stl }) {
           <a href="#service" style={stl.Link}>SERVICE</a>
           <a href="#featured-cars" style={stl.Link}>FEATURED CARS</a>
           <a href="#brands" style={stl.Link}>BRANDS</a>
-          <a href="" style={stl.Link}>CONTACT</a>
+          <Link style={stl.Link} to="/about-us">About Us</Link>
           <Link style={stl.Link} to="/create-service-cars">CREATE SERVICE CARS</Link>
           <Link style={stl.Link} to="/create-featured-cars">CREATE FEATURED CARS</Link>
         </nav>

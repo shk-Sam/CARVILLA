@@ -1,8 +1,6 @@
 // import logo from '../img/logo.png'
 function Footer() {
-    const goToBtn = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-      };
+
     
     return (
         <footer>
@@ -36,11 +34,6 @@ function Footer() {
                     </svg>
                 </a>
             </div>
-            <div className="top-btn" onClick={goToBtn}>
-            <div className="circle">
-                <div className="arrow">/\</div>
-            </div>
-        </div>
 
         </footer>
     )
