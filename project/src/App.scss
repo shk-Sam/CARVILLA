@@ -1,0 +1,360 @@
+$lightpurple: #4E4FFA;
+$darkPurple: #2A2D54;
+$darkerPurple: #4745AD;
+$lightGrey: #959BA7;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@mixin wrapper ($wid: 100%, $marg: 0 auto, $maxWid: 1000px) {
+  width: $wid;
+  margin: $marg;
+  max-width: $maxWid;
+}
+
+.wrap {
+  @include wrapper;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  z-index: 1;
+
+  form {
+    display: flex;
+    border: solid 2px $darkerPurple;
+    background-color: white;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    input {
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .car {
+    display: flex;
+    font-size: x-large;
+    justify-content: space-between;
+    color: #fff;
+    margin-left: 150px;
+    font-family: "Playfair Display";
+
+  }
+
+  nav {
+    margin-right: 95px;
+    margin-top: 10px;
+    display: flex;
+    font-size: 10px;
+
+    a {
+      color: #fff;
+      // justify-content: space-around;
+      margin-right: 15px;
+
+      &:hover {
+        color: $darkerPurple;
+      }
+    }
+  }
+
+}
+
+
+.heroBanner {
+  background: url(../src/img/images/images/welcome-hero/welcome-banner.jpg);
+  background-size: cover;
+  height: 650px;
+  position: absolute;
+  /* Position the header at the top of the screen */
+  top: 0;
+  /* Ensure it's at the top */
+  left: 0;
+  width: 100%;
+  /* Full width of the page */
+  z-index: 1;
+  /* Makes sure the header is on top of other content */
+
+
+  /* The overlay, covering the entire background image only */
+  .overlay {
+    position: absolute;
+    /* Overlay covers the whole screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 45, 84, 0.5);
+    /* Dark background with 50% opacity */
+    z-index: -1;
+    /* Ensure overlay is below the header */
+  }
+}
+
+.heroBanner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+
+  // align-items: center;
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  .heading {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    color: #fff;
+  }
+
+  .btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightpurple;
+    color: white;
+    padding: 9px 40px;
+  }
+}
+
+.serviceSection {
+  &>* {
+    width: 35%;
+  }
+
+  @include wrapper;
+  display: flex;
+  margin-left: 180px;
+  margin-top: 100px;
+  // justify-content: space-around;
+
+  .serviceCard {
+    width: 280px;
+    padding: 45px 15px;
+    border: 1.5px solid $lightGrey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 25px;
+
+    .thumbnail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100px;
+
+      img {
+        height: 70px;
+        width: 70px;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      // display: flex;
+      // margin-bottom: ;
+      .header {
+        margin-bottom: 10px;
+      }
+      p {
+        color: $lightGrey;
+        margin-bottom: 15px;
+      }
+      
+      .bttm-line {
+        align-items: center;
+        background-color: $lightpurple;
+        width: 20px;
+        height: 2px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 120px;
+      }
+    }
+  }
+}
+
+.carSection {
+  @include wrapper;
+  display: flex;
+  margin-top: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    p {
+      display: flex;
+      justify-content: center;
+    }
+
+    h2 {
+      align-items: center;
+      justify-content: center;
+      // margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .bttm-line {
+      background-color: $lightpurple;
+      width: 50%;
+      height: 2px;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 70px;
+    }
+  }
+
+
+  .carModels {
+    display: flex;
+    flex-direction: row;
+
+    .plantCard {
+      // border: solid 2px black;
+      width: 210px;
+      display: flex;
+      margin-left: 15px;
+      flex-direction: column;
+
+      .thumbnail {
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        border: solid 1px #A9A9A9;
+        border-radius: 2px;
+        padding: 15px 0 0 0;
+
+        &:hover {
+          scale: 1.1;
+        }
+
+        img {
+          height: 80px;
+          width: 150px;
+        }
+
+        p {
+          padding: -5px;
+          border-top: solid 1px $lightGrey;
+          color: #959BA7;
+        }
+      }
+
+      .info {}
+    }
+  }
+}
+
+.brandsSection {
+  @include wrapper;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+
+  img {
+    width: 100px;
+    height: 70px;
+
+    &:hover {
+      scale: 1.3;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  margin-top: 850px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $darkPurple;
+  color: white;
+  top: 50;
+  margin-top: 200px;
+  padding: 20px;
+
+  .copyRight {
+    margin-left: 200px;
+    display: flex;
+    text-align: center;
+  }
+
+  .logos {
+    margin-right: -250px;
+
+    a {
+      svg {
+        fill: #fff;
+        height: 25px;
+        width: 25px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+
+  .circle {
+    top: 45;
+    position: absolute;
+    right: 0;
+    bottom: 45px;
+    // height: 50px;
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    height: 45px;
+    background-color: $lightpurple;
+    opacity: 0.8;
+    border-radius: 50%;
+    // margin-left: 15px;
+
+    .arrow {
+      margin-left: 15px;
+      margin-top: 8px;
+    }
+
+
+  }
+}
