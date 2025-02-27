@@ -1,3 +1,5 @@
+//ServiceTable.js
+
 import Header from './Header';
 import Table from "./Table";
 //predifined components
@@ -112,9 +114,70 @@ const style ={
     <Header stl={style}/>
     </div>
     <div className="row mb-5" style={{marginTop:'50px'}}>
-      <h2 style={{marginTop:'35px',display:'flex', justifyContent:'center',}}>Create Service Cars</h2>
+      <h2 style={{marginTop:'35px',display:'flex', justifyContent:'center',}}>Create and Update  Service Cars</h2>
       <div>
-          <div className="card mt-3">
+      <div className="card">
+            {/* heading */}
+            <div className="card-header">
+              <h3>Create Service Cars</h3>
+            </div>
+            {/* body */}
+            <div className="card-body">
+              <Form>
+                {/* Name */}
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Name" 
+                  // pending for understand
+                  onChange={(e)=>{setName(e.target.value)}} value={name}
+                  />
+                  {/* <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text> */}
+                </Form.Group>
+                {/* Description */}
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Description</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Description" 
+                  onChange={(e)=>{setDesc(e.target.value)}} value={desc}
+                  />
+                  {/* <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text> */}
+                </Form.Group>
+                {/* Link */}
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Link</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter Github Profile Link"
+                    onChange={(e)=>{setLink(e.target.value)}} value={link}
+                  />
+                  {/* <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text> */}
+                </Form.Group>
+                {/* Submit Button */}
+                <Button variant="primary" type="submit" onClick={(e)=>{
+                  createProfile(e)
+                }}>
+                  Add Service Data
+                </Button>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        {/* Profile List */}
+        <div className="col-md-8">
+          <Table 
+          profiles={profiles} set={setSingleProfile} setProfile={setProfiles} 
+          />
+        </div>
+        {/* Create Profile Form */}
+      <div className="col-md-4">
+      <div className="card mt-3">
             {/* heading */}
             <div className="card-header">
               <h3>Update Service Cars</h3>
@@ -170,72 +233,12 @@ const style ={
                   // ])
                   updateProfile(e)
                 }}>
-                  Edit Profile
+                  Edit Service Data
                 </Button>
               </Form>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="row">
-        {/* Profile List */}
-        <div className="col-md-8">
-          <Table 
-          profiles={profiles} set={setSingleProfile} setProfile={setProfiles} 
-          />
-        </div>
-        {/* Create Profile Form */}
-      <div className="col-md-4">
-          <div className="card">
-            {/* heading */}
-            <div className="card-header">
-              <h3>Create Service Cars</h3>
-            </div>
-            {/* body */}
-            <div className="card-body">
-              <Form>
-                {/* Name */}
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Name" 
-                  // pending for understand
-                  onChange={(e)=>{setName(e.target.value)}} value={name}
-                  />
-                  {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text> */}
-                </Form.Group>
-                {/* Description */}
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Description</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Description" 
-                  onChange={(e)=>{setDesc(e.target.value)}} value={desc}
-                  />
-                  {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text> */}
-                </Form.Group>
-                {/* Link */}
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Link</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Github Profile Link"
-                    onChange={(e)=>{setLink(e.target.value)}} value={link}
-                  />
-                  {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text> */}
-                </Form.Group>
-                {/* Submit Button */}
-                <Button variant="primary" type="submit" onClick={(e)=>{
-                  createProfile(e)
-                }}>
-                  Add Profile
-                </Button>
-              </Form>
-            </div>
-          </div>
+         
         </div>
       </div>
     </>

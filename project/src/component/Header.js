@@ -12,11 +12,11 @@ function Header({ stl }) {
   return (
     <>
       <header style={stl.header}>
-        <a style={stl.a} href='' className="car">CARVILLA</a>
-        <form onSubmit={onSearch}>
+        <Link style={stl.a} href='' to="/carvilla-home" className="car">CARVILLA</Link>
+        <form onSubmit={onSearch} method="post">
           <input type="text" name="search" placeholder="Search Your Car..." onChange={(e)=>{
             setQuery(e.target.value)
-          }} />
+          }} value={query}/>
           <input type="submit" value={"search"}/>
         </form>
         <nav>

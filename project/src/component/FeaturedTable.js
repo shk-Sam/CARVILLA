@@ -98,13 +98,13 @@ const style ={
     <Header stl={style}/>
     <div className="row mb-5" style={{marginTop:'50px'}}>
       <h2 style={{marginTop:'35px',display:'flex', justifyContent:'center',}}>
-        Create Featured Cars
+        Create and Update Featured Cars
       </h2>
       <div>
            <div className="card">
             {/* heading */}
             <div className="card-header">
-              <h3 style={{display:'flex' , justifyContent:'center'}}>Create Featured Cars</h3>
+              <h3>Create Featured Cars</h3>
             </div>
             {/* body */}
             <div className="card-body">
@@ -146,7 +146,7 @@ const style ={
                 <Button variant="primary" type="submit" onClick={(e)=>{
                   createProfile(e)
                 }}>
-                  Add Profile
+                  Add Car Data
                 </Button>
               </Form>
             </div>
@@ -218,7 +218,7 @@ const style ={
                   // ])
                   updateProfile(e)
                 }}>
-                  Edit Profile
+                  Edit Car Data
                 </Button>
               </Form>
             </div>

@@ -4,7 +4,8 @@ function Featuredcars ({cards}){
         <div class="plantCard">
         <div class="thumbnail">
             <img src={cards.img} alt=""/>
-            <p style={{fontSize:'smaller', wordSpacing:'2px'}}>{cards.p}</p>
+            <div className="bttm-line"></div>
+            <p style={{fontSize:'smaller', wordSpacing:'2px',marginLeft:'10px', marginTop:'3px'}}>{cards.p}</p>
         </div>
         <div class="info">
             <h6 style={{marginTop:'10px'}}>{cards.name}</h6>

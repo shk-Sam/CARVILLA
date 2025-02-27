@@ -16,7 +16,8 @@ a {
 }
 
 
-@mixin wrapper ($wid: 100%, $marg: 0 auto, $maxWid: 1000px) {
+
+@mixin wrapper ($wid: 100%, $marg: 0 auto, $maxWid: 1100px) {
   width: $wid;
   margin: $marg;
   max-width: $maxWid;
@@ -41,6 +42,7 @@ a {
     opacity: 0.8;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
     
   &:hover {
     background-color: #0056b3;
@@ -51,6 +53,35 @@ a {
         margin-left: 17px;
         margin-top: 8px;
       }
+}
+
+//hoist
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 550px;
+  width: 100%;
+  background-color: beige;
+  color: rgb(179, 182, 245);
+
+  h2 {
+    margin-left: 70px;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  span{
+    margin-left: -620px;
+    font-size: large;
+    color: chocolate;
+  }
+
+  p {
+    margin-left: 70px;
+    color: chocolate;
+  }
 }
 
 header {
@@ -168,7 +199,7 @@ header {
     color: #fff;
   }
 
-  .btn {
+  a {
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -186,7 +217,7 @@ header {
 
   @include wrapper;
   display: flex;
-  margin-left: 149px;
+  margin-left: 280px;
   margin-top: 100px;
   // justify-content: space-around;
 
@@ -276,7 +307,6 @@ header {
     flex-direction: row;
 
     .plantCard {
-      // border: solid 2px black;
       width: 210px;
       display: flex;
       margin-left: 15px;
@@ -301,10 +331,14 @@ header {
           height: 80px;
           width: 150px;
         }
+        .bttm-line{
+          width: 210px;
+          height: 1px;
+          background-color: $lightGrey;
+        }
 
         p {
-        //   padding: -5px;
-          border-top: solid 1px $lightGrey;
+          margin-left: 15px;
           color: #959BA7;
         }
       }
@@ -317,11 +351,11 @@ header {
 .brandsSection {
   @include wrapper;
   display: flex;
-  margin-left: 110px;
+  margin-left: 230px;
   margin-top: 150px;
 
   img {
-    width: 120px;
+    width: 110px;
   margin-left: 55px;
     height: 70px;
 
@@ -362,21 +396,209 @@ footer {
 
 
 // Responsive strt
-@media screen and (min-width:1400px) and (max-width:1920px) {
-    .serviceSection{
-        margin-left: 240px;
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .heroBanner{
+    height: 1100px;
+    h1{margin-top: 100px;}
+  }
+  .serviceSection {
+    &>* {
+      width: 35%;
     }
-    
-    .brandsSection{
-        margin-left: 190px;
+  
+    @include wrapper;
+    display: flex;
+    margin-left: 350px;
+    margin-top: 100px;
+    // justify-content: space-around;
+  
+    .serviceCard {
+      width: 500px;
+      padding: 45px 15px;
+      border: 1.5px solid $lightGrey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-left: 25px;
+  
+      .thumbnail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 140px;
+  
         img {
-            width: 110px;
-          margin-left: 55px;
-            height: 70px;
+          height: 90px;
+          width: 90px;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        .header {
+          font-size: larger;
+          margin-bottom: 30px;
+        }
+        p {
+          color: $lightGrey;
+          margin-bottom: 25px;
+        }
         
-            &:hover {
-              scale: 1.3;
-            }
-          }
+        .bttm-line {
+          align-items: center;
+          background-color: $lightpurple;
+          width: 20px;
+          height: 2px;
+          border-radius: 50%;
+          margin-top: 10px;
+          margin-left: 120px;
+        }
+      }
     }
+  }
+
+
+  .carSection {
+    @include wrapper;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .heading {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+  
+      p {
+        display: flex;
+        justify-content: center;
+      }
+  
+      h2 {
+        align-items: center;
+        justify-content: center;
+        // margin-top: 10px;
+        margin-bottom: 10px;
+      }
+  
+      .bttm-line {
+        background-color: $lightpurple;
+        width: 50%;
+        height: 2px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 70px;
+      }
+    }
+  
+  
+    .carModels {
+      display: flex;
+      flex-direction: row;
+  
+      .plantCard {
+        width: 270px;
+        display: flex;
+        margin-left: 15px;
+        flex-direction: column;
+  
+        .thumbnail {
+          height: 220px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: end;
+          border: solid 1px #A9A9A9;
+          border-radius: 2px;
+          padding: 30px 1px 0 1px;
+  
+          &:hover {
+            scale: 1.05;
+          }
+  
+          img {
+              margin-bottom: 18px;
+            height: 80px;
+            width: 150px;
+          }
+          .bttm-line{
+            width: 210px;
+            height: 1px;
+            background-color: $lightGrey;
+          }
+  
+          p {
+            margin-left: 15px;
+            color: #959BA7;
+          }
+        }
+  
+        .info {}
+      }
+    }
+  }
+  .brandsSection{
+    margin-left: 450px;
+  }
+  footer{
+    .copyRight{
+      margin-left: 350px;
+    }
+    .logos{
+      margin-right: 285px;
+    }
+  }
 }
+
+// tablet
+// @media (min-width: 768px) and (max-width: 1280px) {
+//   header {
+//     margin-top: 20px;
+//   }
+//   .HeroBanner {
+//     height: 600px;
+//     h1 {
+//       font-size: 36px; 
+//     } 
+//     h5 {
+
+//       font-size: 18px;
+//     }
+//   }
+
+//   .Card-Section {
+//     flex-direction: row;
+//     margin-top: 50px;
+//     justify-content: space-evenly;
+//     align-items: center;
+//   }
+
+//   .card {
+//     width: 90%; /* Make cards take up more space */
+//     margin-bottom: 20px;
+//   }
+
+//   #Featured-cards {
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     margin: 0 90px 0 100px;
+//   }
+
+//   .brand {
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//   }
+
+  
+//    footer {
+//     justify-content: space-between;
+//     flex-direction: row;
+//     padding-left: 70px;
+//     .brand-logos {
+//       margin-right: 70px;
+// }
+// }
+// }
