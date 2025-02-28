@@ -28,31 +28,31 @@ a {
 }
 
 .floating {
-  position: fixed;
-  top: 50px;
-  bottom: 10px;
-  right: 20px;
-  background-color: #291c77;
-  color: white;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-  opacity: 0.8;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-
+    position: absolute;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #291c77;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    
   &:hover {
     background-color: #0056b3;
-    transform: scale(1.1);
+    transform:scale(1.1);
   }
-
-  .arrow {
-    margin-left: 17px;
-    margin-top: 8px;
-  }
+    
+    .arrow {
+        margin-left: 17px;
+        margin-top: 8px;
+      }
 }
 
 //hoist
@@ -72,8 +72,7 @@ a {
     font-size: 50px;
     font-weight: bolder;
   }
-
-  span {
+  span{
     margin-left: -620px;
     font-size: large;
     color: chocolate;
@@ -218,7 +217,7 @@ header {
 
   @include wrapper;
   display: flex;
-  margin-left: 280px;
+  margin-left: 200px;
   margin-top: 100px;
   // justify-content: space-around;
 
@@ -230,7 +229,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 30px;
 
     .thumbnail {
       display: flex;
@@ -243,20 +242,17 @@ header {
         width: 70px;
       }
     }
-
     .info {
       display: flex;
       flex-direction: column;
-
       .header {
         margin-bottom: 10px;
       }
-
       p {
         color: $lightGrey;
         margin-bottom: 15px;
       }
-
+      
       .bttm-line {
         align-items: center;
         background-color: $lightpurple;
@@ -308,7 +304,6 @@ header {
 
   .carModels {
     display: flex;
-    margin-left: -150px;
     flex-direction: row;
 
     .plantCard {
@@ -332,12 +327,11 @@ header {
         }
 
         img {
-          margin-bottom: 18px;
+            margin-bottom: 18px;
           height: 80px;
           width: 150px;
         }
-
-        .bttm-line {
+        .bttm-line{
           width: 210px;
           height: 1px;
           background-color: $lightGrey;
@@ -357,12 +351,12 @@ header {
 .brandsSection {
   @include wrapper;
   display: flex;
-  margin-left: 230px;
+  margin-left: 170px;
   margin-top: 150px;
 
   img {
-    width: 90px;
-    margin-left: 55px;
+    width: 110px;
+  margin-left: 55px;
     height: 70px;
 
     &:hover {
@@ -401,312 +395,310 @@ footer {
 }
 
 
-// Responsive strt
-@media (min-width: 1400px) and (max-width: 1920px) {
-  // Responsive strt
+// Responsive strt// Responsive strt
 
-  //widescreen 
-  @media (min-width: 1400px) and (max-width: 1900px) {
+//widescreen 
+@media (min-width: 1400px) and (max-width: 1900px) {
 
-    .floating {
-      margin-bottom: 150px;
-      position: fixed;
-      top: 630px;
-      right: 100px;
-      bottom: 40px;
-      background-color: #291c77;
-      color: white;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 20px;
-      opacity: 0.8;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
+  .floating {
+    margin-bottom: 150px;
+    position: fixed;
+    top: 630px;
+    right: 100px;
+    bottom: 40px;
+    background-color: #291c77;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 
-      &:hover {
-        background-color: #0056b3;
-        transform: scale(1.1);
+    &:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .arrow {
+      margin-left: 17px;
+      margin-top: 8px;
+    }
+  }
+
+  .routes {
+    width: 100%;
+
+    body {
+      width: 100%;
+    }
+
+
+    header {
+      display: flex;
+
+      .head {
+        display: flex;
+
+        .car {
+          display: flex;
+          font-size: 40px;
+          justify-content: space-between;
+          color: #fff;
+          margin-left: 180px;
+          font-family: "Playfair Display";
+
+        }
+
+        form {
+          margin-top: 10px;
+          height: 45px;
+          width: 280px;
+          display: flex;
+          border: solid 2px $darkerPurple;
+          background-color: white;
+          align-items: center;
+          padding: 0 2px 0 2px;
+          border-radius: 5px;
+          margin-left: 200px;
+
+          input {
+            margin-left: 10px;
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
       }
 
-      .arrow {
-        margin-left: 17px;
-        margin-top: 8px;
+
+      nav {
+        margin-top: 20px;
+        margin-left: 140px;
+        font-size: 16px;
+
+        a {
+          margin-left: 2px;
+        }
       }
     }
 
-    .routes {
+    .heroBanner {
       width: 100%;
+      height: 900px;
+      background-size: cover;
 
-      body {
-        width: 100%;
-      }
-
-
-      header {
+      h1 {
+        font-size: 55px;
         display: flex;
-
-        .head {
-          display: flex;
-
-          .car {
-            display: flex;
-            font-size: 40px;
-            justify-content: space-between;
-            color: #fff;
-            margin-left: 180px;
-            font-family: "Playfair Display";
-
-          }
-
-          form {
-            margin-top: 10px;
-            height: 45px;
-            width: 280px;
-            display: flex;
-            border: solid 2px $darkerPurple;
-            background-color: white;
-            align-items: center;
-            padding: 0 2px 0 2px;
-            border-radius: 5px;
-            margin-left: 200px;
-
-            input {
-              margin-left: 10px;
-              border: none;
-
-              &:focus {
-                outline: none;
-              }
-            }
-          }
-        }
-
-
-        nav {
-          margin-top: 20px;
-          margin-left: 140px;
-          font-size: 16px;
-
-          a {
-            margin-left: 2px;
-          }
-        }
+        justify-content: center;
+        align-items: center;
+        color: #fff;
       }
 
-      .heroBanner {
-        width: 100%;
-        height: 900px;
-        background-size: cover;
-
-        h1 {
-          font-size: 55px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-        }
-
-        .heading {
-          display: flex;
-          text-align: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 270px;
-        }
-
-        p {
-          display: flex;
-          justify-content: center;
-          margin-top: 40px;
-          color: #fff;
-          font-size: 25px;
-        }
-
-        .btn {
-          margin-top: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $lightpurple;
-          color: white;
-          font-size: 20px;
-          padding: 15px 50px;
-        }
+      .heading {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 270px;
       }
 
-      .serviceSection {
-        margin-top: 200px;
-        margin-bottom: 100px;
-        margin-left: 240px;
+      p {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        color: #fff;
+        font-size: 25px;
+      }
 
-        .serviceCard {
-          width: 360px;
+      .btn {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $lightpurple;
+        color: white;
+        font-size: 20px;
+        padding: 15px 50px;
+      }
+    }
+
+    .serviceSection {
+      margin-top: 200px;
+      margin-bottom: 100px;
+      margin-left: 240px;
+
+      .serviceCard {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 55px;
+        padding: 75px 75px;
+
+        .thumbnail {
           display: flex;
           flex-direction: column;
-          text-align: center;
-          margin-left: 55px;
-          padding: 75px 75px;
+          align-items: center;
+          height: 80px;
+          width: 490px;
 
-          .thumbnail {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+          img {
+            margin-top: -25px;
             height: 80px;
-            width: 490px;
-
-            img {
-              margin-top: -25px;
-              height: 80px;
-              width: 80px;
-              margin-right: 290px;
-            }
+            width: 80px;
+            margin-right: 290px;
           }
-
-          .info {
-            display: flex;
-            flex-direction: column;
-
-            .header {
-              // margin-left: -12px;
-              margin-bottom: 10px;
-              font-size: 17px;
-            }
-
-            p {
-              color: $lightGrey;
-              font-size: 16px;
-              margin-top: 15px;
-              margin-bottom: 15px;
-            }
-
-            .bttm-line {
-              border: solid $lightpurple 1.5px;
-              margin-top: 35px;
-              margin-left: 100px;
-            }
-          }
-
         }
-      }
 
-      .carSection {
-        margin-left: 380px;
-
-        .heading {
+        .info {
           display: flex;
           flex-direction: column;
-          margin-bottom: 90px;
+
+          .header {
+            // margin-left: -12px;
+            margin-bottom: 10px;
+            font-size: 17px;
+          }
 
           p {
-            display: flex;
-            font-size: 20px;
-            justify-content: center;
-          }
-
-          h2 {
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            font-size: 50px;
+            color: $lightGrey;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
           }
 
           .bttm-line {
-            width: 180px;
-            border-radius: 40px;
+            border: solid $lightpurple 1.5px;
+            margin-top: 35px;
+            margin-left: 100px;
           }
         }
 
-        .carModels {
+      }
+    }
+
+    .carSection {
+      margin-left: 380px;
+
+      .heading {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 90px;
+
+        p {
           display: flex;
-          flex-direction: row;
+          font-size: 20px;
+          justify-content: center;
+        }
 
-          .plantCard {
-            width: 260px;
-            margin-left: 50px;
+        h2 {
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+          font-size: 50px;
+        }
 
-
-            .thumbnail {
-              height: 270px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: end;
-              border: solid 1px #A9A9A9;
-              border-radius: 2px;
-              padding: 30px 1px 0 1px;
-
-              .bttm-line {
-                height: 1px;
-                width: 260px;
-                background-color: $lightGrey;
-              }
-
-              &:hover {
-                scale: 1.05;
-              }
-
-              img {
-                margin-bottom: 40px;
-                height: 100px;
-                width: 190px;
-              }
-
-              p {
-                margin-top: 5px;
-                margin-left: 15px;
-                word-spacing: 15px;
-                font-size: medium;
-                color: #959BA7;
-              }
-            }
-
-          }
+        .bttm-line {
+          width: 180px;
+          border-radius: 40px;
         }
       }
 
-      .brandsSection {
-        margin-left: 180px;
+      .carModels {
+        display: flex;
+        flex-direction: row;
 
-        img {
-          margin-left: 85px;
-          height: 100px;
-          width: 150px;
+        .plantCard {
+          width: 260px;
+          margin-left: 50px;
+
+
+          .thumbnail {
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            border: solid 1px #A9A9A9;
+            border-radius: 2px;
+            padding: 30px 1px 0 1px;
+
+            .bttm-line {
+              height: 1px;
+              width: 260px;
+              background-color: $lightGrey;
+            }
+
+            &:hover {
+              scale: 1.05;
+            }
+
+            img {
+              margin-bottom: 40px;
+              height: 100px;
+              width: 190px;
+            }
+
+            p {
+              margin-top: 5px;
+              margin-left: 15px;
+              word-spacing: 15px;
+              font-size: medium;
+              color: #959BA7;
+            }
+          }
+
         }
       }
     }
 
+    .brandsSection {
+      margin-left: 180px;
 
-    footer {
-      margin-bottom: -25px;
-      margin-top: 220px;
-      padding: 25px;
-
-      .copyRight {
-        margin-left: 200px;
-        display: flex;
-        margin-top: 5px;
-        font-size: larger;
-        text-align: center;
+      img {
+        margin-left: 85px;
+        height: 100px;
+        width: 150px;
       }
+    }
+  }
 
-      .logos {
-        margin-right: 220px;
 
-        a {
-          svg {
-            fill: #fff;
-            height: 35px;
-            width: 35px;
-            margin-left: 30px;
-          }
+  footer {
+    margin-bottom: -25px;
+    margin-top: 220px;
+    padding: 25px;
+
+    .copyRight {
+      margin-left: 200px;
+      display: flex;
+      margin-top: 5px;
+      font-size: larger;
+      text-align: center;
+    }
+
+    .logos {
+      margin-right: 220px;
+
+      a {
+        svg {
+          fill: #fff;
+          height: 35px;
+          width: 35px;
+          margin-left: 30px;
         }
       }
     }
   }
 }
 
+// tablet
 // tablet
 @media (min-width: 768px) and (max-width: 1280px) {
   .routes {
