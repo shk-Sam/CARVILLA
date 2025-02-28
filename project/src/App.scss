@@ -28,9 +28,9 @@ a {
 }
 
 .floating {
-  position: absolute;
   position: fixed;
-  bottom: 20px;
+  top: 50px;
+  bottom: 10px;
   right: 20px;
   background-color: #291c77;
   color: white;
@@ -308,6 +308,7 @@ header {
 
   .carModels {
     display: flex;
+    margin-left: -150px;
     flex-direction: row;
 
     .plantCard {
@@ -360,7 +361,7 @@ header {
   margin-top: 150px;
 
   img {
-    width: 110px;
+    width: 90px;
     margin-left: 55px;
     height: 70px;
 

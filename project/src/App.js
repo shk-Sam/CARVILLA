@@ -14,7 +14,7 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="routes">
+      <div>
         <Routes>
         <Route  path="/carvilla-home" element={<Home />} />
           <Route  path="/" element={<Home />} />
