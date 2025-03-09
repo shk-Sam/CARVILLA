@@ -1,5 +1,13 @@
 <h1 align="center">Hi 👋, I'm Mohammed Saad</h1>
 <h3 align="center">A passionate Full Stack developer from India</h3>
+<p>
+This project was developed with minimal AI assistance—only 10%, while the remaining 90% was built by me.  
+Because I handled most of the work myself, I learned a lot, faced various challenges, and improved my problem-solving skills.  
+I utilized Bootstrap's predefined features, CRUD operations, routing, and many other techniques to enhance the project's efficiency.  
+As a fresher, I’m always open to feedback. If you find anything that can be improved, please let me know so I can make it better.  
+I hope you like this project!
+</p>
+
 
 - 🔭 I’m currently working on [Carvilla](https://github.com/shk-Sam/CARVILLA)
 
