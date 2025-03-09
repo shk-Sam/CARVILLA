@@ -31,9 +31,6 @@ function App() {
     <a className="floating" onClick={goToBtn}>
         <div className="arrow">/\</div>
     </a>
-  
-      <Footer />
-      
     </div>
   );
 }

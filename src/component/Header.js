@@ -3,21 +3,35 @@ import { Link,useNavigate } from "react-router-dom"
 
 
 function Header({ stl }) {
-  let navigate = useNavigate(); 
-  const [query,setQuery]=useState("")
-  const onSearch = ()=>{
-    navigate('/search/'+query)
-  }
+  let navigate = useNavigate();
+  const [query, setQuery] = useState("");
+
+  const onSearch = (e) => {
+    e.preventDefault(); // Prevents page reload
+    if (query.trim() !== "") {
+      navigate("/search/" + query);
+    }
+  };
 
   return (
     <>
       <header style={stl.header}>
         <Link style={stl.a} href='' to="/carvilla-home" className="car">CARVILLA</Link>
-        <form onSubmit={onSearch} method="post">
+        {/* <form onSubmit={onSearch} method="post">
           <input type="text" name="search" placeholder="Search Your Car..." onChange={(e)=>{
             setQuery(e.target.value)
           }} value={query}/>
           <input type="submit" value={"search"}/>
+        </form> */}
+            <form onSubmit={onSearch}>
+          <input 
+            type="text" 
+            name="search" 
+            placeholder="Search Your Car..." 
+            onChange={(e) => setQuery(e.target.value)}
+            value={query} 
+          />
+          <button type="submit">Search</button>
         </form>
         <nav>
           <Link style={stl.Link} to="/">Home</Link>

@@ -56,31 +56,34 @@ a {
 }
 
 //hoist
-.aboutMe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  height: 550px;
-  width: 100%;
-  background-color: beige;
-  color: rgb(179, 182, 245);
-
-  h2 {
-    margin-left: 70px;
-    font-size: 50px;
-    font-weight: bolder;
-  }
-  span{
-    margin-left: -620px;
-    font-size: large;
-    color: chocolate;
-  }
-
-  p {
-    margin-left: 70px;
-    color: chocolate;
+.aboutPage{
+  margin-top: -25px;
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 750px;
+    width: 100%;
+    background-color: beige;
+    color: rgb(179, 182, 245);
+  
+    h2 {
+      margin-left: 70px;
+      font-size: 50px;
+      font-weight: bolder;
+    }
+    span{
+      margin-left: -620px;
+      font-size: large;
+      color: chocolate;
+    }
+  
+    p {
+      margin-left: 70px;
+      color: chocolate;
+    }
   }
 }
 
@@ -343,7 +346,6 @@ header {
         }
       }
 
-      .info {}
     }
   }
 }
@@ -699,7 +701,6 @@ footer {
 }
 
 // tablet
-// tablet
 @media (min-width: 768px) and (max-width: 1280px) {
   .routes {
     width: 100%;
@@ -952,6 +953,143 @@ footer {
     .arrow {
       margin-left: 17px;
       margin-top: 8px;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
+
+    .car {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    form {
+      width: 90%;
+      margin: 10px auto;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    nav {
+      margin: 10px 0;
+      font-size: 8px;
+      
+      a {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .heroBanner {
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+
+    .heading {
+      margin-top: 200px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 10px;
+      margin: 20px 20px 1px;
+    }
+
+    a {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+
+  .serviceSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+
+    .serviceCard {
+      margin-left: -7px;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .carSection {
+    margin-top: 50px;
+    .carModels {
+      flex-direction: column;
+      align-items: center;
+
+      .plantCard {
+        padding: 0;
+        width: 80%;
+        margin-bottom: 20px;
+        .thumbnail{
+          .bttm-line{
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .brandsSection {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      width: 90px;
+      height: 80px;
+      margin: 10px;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
+    .copyRight {
+      font-size: smaller;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .logos {
+      margin-right: 0;
+
+      a {
+        svg {
+          height: 20px;
+          width: 20px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .floating {
+    height: 40px;
+    width: 40px;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+
+    .arrow {
+      margin-left: 12px;
+      margin-top: 6px;
     }
   }
 }

@@ -13,6 +13,7 @@ import brnd4 from '../img/images/images/brand/br4.png'
 import brnd5 from '../img/images/images/brand/br5.png'
 import brnd6 from '../img/images/images/brand/br6.png'
 import Header from './Header'
+import Footer from './Footer'
 
 function Home() {
 const style ={
@@ -91,6 +92,16 @@ const style ={
       img: brnd6
     }
   ]
+  const styling = {
+    footer: {
+        backgroundColor: '#2A2D54', 
+        display: 'flex', 
+        width: '100%', 
+        marginTop: '130px',  // Adjust this value to move it closer
+        padding: '15px 20px', 
+        marginBottom: '0px', // Remove any extra bottom margin
+    }
+};
 
   return (
     <>
@@ -137,7 +148,8 @@ const style ={
           })
         }
       </div>
-
+      
+      <Footer stl={styling}/>
     </>
   )
 }
