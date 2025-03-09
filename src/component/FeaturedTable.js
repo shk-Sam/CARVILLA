@@ -141,7 +141,7 @@ const FeaturedTable = () => {
         <Table profiles={profiles} set={setSingleProfile} setProfile={setProfiles} />
       </div>
       <div className="col-md-4" style={{marginTop:"-15px"}}> 
-        <div className="card mt-3">
+        <div className="card mt-3" style={{height:"470px"}}>
           <div className="card-header">
             <h3>Update Featured Cars</h3>
           </div>

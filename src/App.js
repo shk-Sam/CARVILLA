@@ -14,7 +14,6 @@ function App() {
   };
   return (
     <div className="App">
-      <div>
         <Routes>
         <Route  path="/carvilla-home" element={<Home />} />
           <Route  path="/" element={<Home />} />
@@ -27,7 +26,6 @@ function App() {
           <Route path="/create-featured-cars" element={<FeaturedTable />} />
           <Route path="/search/:query" element={<Search />} />
         </Routes>
-      </div>
     <a className="floating" onClick={goToBtn}>
         <div className="arrow">/\</div>
     </a>

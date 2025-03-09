@@ -87,6 +87,7 @@ a {
   }
 }
 
+
 header {
   position: absolute;
   width: 100%;
@@ -131,7 +132,6 @@ header {
 
     a {
       color: #fff;
-      // justify-content: space-around;
       margin-right: 15px;
 
       &:hover {
@@ -956,269 +956,141 @@ footer {
     }
   }
 }
-// Mobile (up to 480px)
-@media (max-width: 480px) {
-  .routes {
-    header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
-      margin-top: -10px;
 
-      .car {
-        font-size: 18px;
-        margin: 5px 0;
-      }
+//mobile
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
 
-      form {
+    .car {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    form {
+      width: 90%;
+      margin: 10px auto;
+
+      input {
         width: 100%;
-        display: flex;
-        justify-content: center;
-
-        input {
-          width: 80%;
-          padding: 8px;
-          font-size: 14px;
-        }
-
-        button {
-          padding: 8px 12px;
-          font-size: 14px;
-        }
-      }
-
-      nav {
-        font-size: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        a {
-          margin: 5px;
-        }
       }
     }
 
-    .heroBanner {
-      height: 400px;
-      background-size: cover;
-      text-align: center;
-
-      .heading {
-        margin-top: 150px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 12px;
-        margin: 10px 15px;
-      }
-
+    nav {
+      margin: 10px 0;
+      font-size: 8px;
+      
       a {
-        padding: 6px 15px;
-        font-size: 12px;
-      }
-    }
-
-    .serviceSection {
-      flex-direction: column;
-      align-items: center;
-      margin: 30px 0;
-
-      .serviceCard {
-        width: 90%;
-        margin-bottom: 15px;
-      }
-    }
-
-    .carSection {
-      margin-top: 30px;
-      .carModels {
-        flex-direction: column;
-        align-items: center;
-
-        .plantCard {
-          width: 90%;
-          margin-bottom: 15px;
-
-          .thumbnail {
-            .bttm-line {
-              width: 250px;
-            }
-          }
-        }
-      }
-    }
-
-    .brandsSection {
-      flex-wrap: wrap;
-      justify-content: center;
-
-      img {
-        width: 70px;
-        height: 60px;
-        margin: 8px;
-      }
-    }
-
-    footer {
-      flex-direction: column;
-      text-align: center;
-      padding: 15px;
-      width: 100%;
-
-      .copyRight {
-        font-size: 12px;
-        margin-bottom: 8px;
-      }
-
-      .logos {
-        a {
-          svg {
-            height: 18px;
-            width: 18px;
-            margin: 4px;
-          }
-        }
-      }
-    }
-
-    .floating {
-      height: 35px;
-      width: 35px;
-      bottom: 8px;
-      right: 8px;
-      font-size: 16px;
-
-      .arrow {
-        margin-left: 10px;
-        margin-top: 5px;
+        margin-right: 8px;
       }
     }
   }
-}
 
+  .heroBanner {
+    height: 500px;
+    background-size: cover;
+    text-align: center;
 
-
-// Laptop (1280px - 1600px)
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .routes {
-    width: 100%;
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 50px;
-
-      .car {
-        font-size: 30px;
-      }
-
-      nav {
-        font-size: 14px;
-        a {
-          margin-right: 10px;
-        }
-      }
+    .heading {
+      margin-top: 200px;
     }
 
-    .heroBanner {
-      height: 750px;
-      background-size: cover;
-
-      .heading {
-        margin-top: 200px;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      p {
-        font-size: 18px;
-      }
-
-      .btn {
-        padding: 12px 45px;
-      }
+    h1 {
+      font-size: 24px;
     }
 
-    .serviceSection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-left: 0;
-      padding: 0 30px;
-
-      .serviceCard {
-        width: 300px;
-        padding: 40px;
-      }
+    p {
+      font-size: 10px;
+      margin: 20px 20px 1px;
     }
 
-    .carSection {
+    a {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+
+  .serviceSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+
+    .serviceCard {
+      margin-left: -7px;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .carSection {
+    margin-top: 50px;
+    .carModels {
+      flex-direction: column;
       align-items: center;
 
-      .carModels {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-
-        .plantCard {
-          width: 220px;
-
-          .thumbnail {
-            height: 250px;
-
-            img {
-              width: 170px;
-              height: auto;
-            }
+      .plantCard {
+        padding: 0;
+        width: 80%;
+        margin-bottom: 20px;
+        .thumbnail{
+          .bttm-line{
+            width: 300px;
           }
         }
       }
     }
+  }
 
-    .brandsSection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+  .brandsSection {
+    margin-left: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
 
-      img {
-        width: 130px;
-        height: 80px;
-      }
+    img {
+      width: 90px;
+      height: 60px;
+      margin: 10px;
     }
   }
 
   footer {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 20px;
 
     .copyRight {
-      margin: 10px 0;
+      font-size: smaller;
+      margin-left: 0;
+      margin-bottom: 10px;
     }
 
     .logos {
-      display: flex;
-      gap: 15px;
+      margin-right: 0;
 
-      a svg {
-        height: 30px;
-        width: 30px;
+      a {
+        svg {
+          height: 20px;
+          width: 20px;
+          margin: 5px;
+        }
       }
     }
   }
-}
 
+  .floating {
+    height: 40px;
+    width: 40px;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+
+    .arrow {
+      margin-left: 12px;
+      margin-top: 6px;
+    }
+  }
+}
