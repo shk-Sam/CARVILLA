@@ -98,7 +98,7 @@ const style ={
         display: 'flex', 
         width: '100%', 
         marginTop: '130px',  // Adjust this value to move it closer
-        padding: '15px 20px', 
+        padding: '25px 25px', 
         marginBottom: '0px', // Remove any extra bottom margin
     }
 };
