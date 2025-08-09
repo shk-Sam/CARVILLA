@@ -13,21 +13,22 @@ function App() {
   };
   return (
     <div className="App">
-        <Routes>
-        <Route  path="/carvilla-home" element={<Home />} />
-          <Route  path="/" element={<Home />} />
-          <Route path="/service" element={<ServiceTable />} />
-          <Route path="/featured-cars" element={<ServiceTable />} />
-          <Route path="/new-cars" element={<ServiceTable />} />
-          <Route path="/brands" element={<ServiceTable />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/create-service-cars" element={<ServiceTable />} />
-          <Route path="/create-featured-cars" element={<FeaturedTable />} />
-          <Route path="/search/:query" element={<Search />} />
-        </Routes>
-    <a href='#' className="floating" onClick={goToBtn}>
+      <Routes>
+        <Route path="/carvilla-home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/service" element={<ServiceTable />} />
+        <Route path="/featured-cars" element={<ServiceTable />} />
+        <Route path="/new-cars" element={<ServiceTable />} />
+        <Route path="/brands" element={<ServiceTable />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/create-service-cars" element={<ServiceTable />} />
+        <Route path="/create-featured-cars" element={<FeaturedTable />} />
+        <Route path="/search/:query" element={<Search />} />
+      </Routes>
+      <button className="floating" onClick={goToBtn}>
         <div className="arrow">/\</div>
-    </a>
+      </button>
+
     </div>
   );
 }
