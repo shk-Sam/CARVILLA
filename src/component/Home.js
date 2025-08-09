@@ -32,7 +32,7 @@ const style ={
       desc: 'Nemo enim ipsam voluptatem quia voluptas sit  aspernatur aut odit aut den fugit sed quia',
     },
     {
-      name: 'Unlimited Repair Warrenty',
+      name: 'Unlimited Repair Warranty',
       img: click,
       desc: 'Nemo enim ipsam voluptatem quia voluptas sit  aspernatur aut odit aut den fugit sed quia',
     },

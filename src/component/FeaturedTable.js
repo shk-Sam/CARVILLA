@@ -31,53 +31,64 @@ const FeaturedTable = () => {
     .catch((error) => console.log(error));
   }, []);
 
-  function createProfile(e){
+  function createProfile(e) {
     e.preventDefault();
     const id = profiles.length + 1;
-    fetch("http://localhost:8000/profileCreate",{
-      method:"POST",
-      headers:{'Content-Type':'Application/json'},
+    fetch("http://localhost:8000/profileCreate", {
+      method: "POST",
+      headers: { "Content-Type": "Application/json" },
       body: JSON.stringify({
-        id:id,
-        name:name,
-        desc:desc,
-        link:link,
-      })
+        id: id,
+        name: name,
+        desc: desc,
+        link: link,
+        type: "featured",
+      }),
     })
-    .then((res) => res.json())
-    .then((res) => {
-      setProfiles(res);
-      setName("");
-      setDesc("");
-      setLink("");
-    }) 
-    .catch((error) => console.log(error));
+      .then((res) => res.json())
+      .then((res) => {
+        // **Sirf "featured" type ka data profiles me set karo**
+        const featuredProfiles = res.filter((profile) => profile.type === "featured");
+        setProfiles(featuredProfiles);
+  
+        setName("");
+        setDesc("");
+        setLink("");
+      })
+      .catch((error) => console.log(error));
   }
+  
 
-  function updateProfile(e){
+  function updateProfile(e) {
     e.preventDefault();
-    fetch("http://localhost:8000/profileUpdate",{
-      method:"PUT",
-      headers:{'Content-Type':'Application/json'},
+    fetch("http://localhost:8000/profileUpdate", {
+      method: "PUT",
+      headers: { "Content-Type": "Application/json" },
       body: JSON.stringify({
-        id:sinlgeProfile.id,
-        name:sinlgeProfile.name,
-        desc:sinlgeProfile.desc,
-        link:sinlgeProfile.link,
-      })
+        id: sinlgeProfile.id,
+        name: sinlgeProfile.name,
+        desc: sinlgeProfile.desc,
+        link: sinlgeProfile.link,
+        type: "featured",
+      }),
     })
-    .then((res) => res.json())
-    .then((res) => {
-      setProfiles(res);
-      setSingleProfile({
-        id:'',
-        link:'',
-        name:'',
-        desc:'',
-      });
-    }) 
-    .catch((error) => console.log(error));
-  }
+      .then((res) => res.json())
+      .then((res) => {
+        // **Only update featured profiles**
+        const featuredProfiles = res.filter((profile) => profile.type === "featured");
+        setProfiles(featuredProfiles);
+
+        setSingleProfile({
+          id: "",
+          link: "",
+          name: "",
+          desc: "",
+        });
+      })
+      .catch((error) => console.log(error));
+}
+
+  
   
   const style ={
     header:{backgroundColor: 'cornflowerblue', color: 'white',marginTop:'-50px',padding:'15px 20px'},

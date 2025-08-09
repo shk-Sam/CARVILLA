@@ -1,7 +1,6 @@
 import Header from './Header';
 import Table from "./Table";
 //predifined components
-import React from 'react';
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
@@ -34,53 +33,63 @@ const ServiceTable = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  function createProfile(e){
-    e.preventDefault()
-    const id = profiles.length+1;
-    fetch("http://localhost:8000/profileCreate",{
-      method:"POST",
-      headers:{'Content-Type':'Application/json'},
+  function createProfile(e) {
+    e.preventDefault();
+    const id = profiles.length + 1;
+    fetch("http://localhost:8000/profileCreate", {
+      method: "POST",
+      headers: { "Content-Type": "Application/json" },
       body: JSON.stringify({
-        id:id,
-        name:name,
-        desc:desc,
-        link:link,
-      })
+        id: id,
+        name: name,
+        desc: desc,
+        link: link,
+        type: "service",
+      }),
     })
-    .then((res) => {return res.json()})
-    .then((res) => {
-      setProfiles(res)
-      setName("");
-      setDesc("");
-      setLink("");
-    }) 
-    .catch((error) => {console.log(error)})
+      .then((res) => res.json())
+      .then((res) => {
+        // **Sirf service type ke profiles set karo**
+        const serviceProfiles = res.filter((profile) => profile.type === "service");
+        setProfiles(serviceProfiles);
+  
+        setName("");
+        setDesc("");
+        setLink("");
+      })
+      .catch((error) => console.log(error));
   }
+  
 
-  function updateProfile(e){
-    e.preventDefault()
-    fetch("http://localhost:8000/profileUpdate",{
-      method:"PUT",
-      headers:{'Content-Type':'Application/json'},
+  function updateProfile(e) {
+    e.preventDefault();
+    fetch("http://localhost:8000/profileUpdate", {
+      method: "PUT",
+      headers: { "Content-Type": "Application/json" },
       body: JSON.stringify({
-        id:sinlgeProfile.id,
-        name:sinlgeProfile.name,
-        desc:sinlgeProfile.desc,
-        link:sinlgeProfile.link,
-      })
+        id: sinlgeProfile.id,
+        name: sinlgeProfile.name,
+        desc: sinlgeProfile.desc,
+        link: sinlgeProfile.link,
+        type: "service",
+      }),
     })
-    .then((res) => {return res.json()})
-    .then((res) => {
-      setProfiles(res)
-      setSingleProfile({
-        id:'',
-        link:'',
-        name:'',
-        desc:'',
+      .then((res) => res.json())
+      .then((res) => {
+        // **Sirf service type ka data hi profiles me set hoga**
+        const serviceProfiles = res.filter((profile) => profile.type === "service");
+        setProfiles(serviceProfiles);
+  
+        setSingleProfile({
+          id: "",
+          link: "",
+          name: "",
+          desc: "",
+        });
       })
-    }) 
-    .catch((error) => {console.log(error)})
+      .catch((error) => console.log(error));
   }
+  
 
 const style ={
   header:{backgroundColor: 'cornflowerblue',display:'flex', marginTop:'-50px', 
