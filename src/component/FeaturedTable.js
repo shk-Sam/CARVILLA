@@ -1,6 +1,5 @@
 import Header from './Header';
 //predifined components
-import React from 'react';
 import Table from './Table';
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";

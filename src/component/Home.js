@@ -1,4 +1,3 @@
-import { CardSubtitle } from 'react-bootstrap'
 import click from '../img/images/images/icon1.png'
 import CarService from './CarService'
 import Featuredcars from './FeaturedCars'
@@ -117,7 +116,7 @@ const style ={
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula <br />arcu nec nisl pellentesque, ut semper eros lobortis.
             </p>
           </div>
-          <a  href="" className='btn'> Contact Us </a>
+          <a  href="#" className='btn'> Contact Us </a>
         </div>
       </div>
       <div id='service' className='serviceSection'>

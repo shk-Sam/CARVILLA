@@ -1,10 +1,9 @@
 import './App.scss';
 import Home from './component/Home';
-import Footer from './component/Footer';
 
 import ServiceTable from "./component/ServiceTable";
 import FeaturedTable from "./component/FeaturedTable";
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Search from './component/Search';
 import AboutUs from './component/AboutUs';
 
@@ -26,7 +25,7 @@ function App() {
           <Route path="/create-featured-cars" element={<FeaturedTable />} />
           <Route path="/search/:query" element={<Search />} />
         </Routes>
-    <a className="floating" onClick={goToBtn}>
+    <a href='#' className="floating" onClick={goToBtn}>
         <div className="arrow">/\</div>
     </a>
     </div>
